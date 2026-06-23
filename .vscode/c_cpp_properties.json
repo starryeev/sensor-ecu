@@ -1,0 +1,63 @@
+{
+    "configurations": [
+        {
+            "name": "AURIX TC37x TASKING",
+            "includePath": [
+                "${workspaceFolder}",
+                "${workspaceFolder}/Configurations",
+                "${workspaceFolder}/Apps",
+                "${workspaceFolder}/Libraries",
+                "${workspaceFolder}/Libraries/Infra",
+                "${workspaceFolder}/Libraries/Infra/Platform",
+                "${workspaceFolder}/Libraries/Infra/Platform/Tricore",
+                "${workspaceFolder}/Libraries/Infra/Platform/Tricore/Compilers",
+                "${workspaceFolder}/Libraries/Infra/Sfr",
+                "${workspaceFolder}/Libraries/Infra/Sfr/TC37A",
+                "${workspaceFolder}/Libraries/Infra/Sfr/TC37A/_Reg",
+                "${workspaceFolder}/Libraries/Infra/Ssw",
+                "${workspaceFolder}/Libraries/Infra/Ssw/TC37A",
+                "${workspaceFolder}/Libraries/Infra/Ssw/TC37A/Tricore",
+                "${workspaceFolder}/Libraries/Service",
+                "${workspaceFolder}/Libraries/Service/CpuGeneric",
+                "${workspaceFolder}/Libraries/Service/CpuGeneric/**",
+                "${workspaceFolder}/Libraries/iLLD",
+                "${workspaceFolder}/Libraries/iLLD/TC37A",
+                "${workspaceFolder}/Libraries/iLLD/TC37A/Tricore",
+                "${workspaceFolder}/Libraries/iLLD/TC37A/Tricore/**",
+                "${workspaceFolder}/OS",
+                "${workspaceFolder}/OS/FreeRTOS",
+                "${workspaceFolder}/OS/FreeRTOS/include",
+                "${workspaceFolder}/OS/FreeRTOS/portable",
+                "${workspaceFolder}/OS/FreeRTOS/portable/Tasking",
+                "${workspaceFolder}/OS/FreeRTOS/portable/Tasking/TC3"
+            ],
+            "defines": [
+                "__CPU__=tc37x",
+                "__TASKING__",
+                "__REVISION__=0",
+                "__far=",
+                "__near=",
+                "__a0=",
+                "__a1=",
+                "__a8=",
+                "__a9=",
+                "__interrupt(x)=",
+                "__interrupt_fast(x)=",
+                "__vector_table(x)="
+            ],
+            "cStandard": "c99",
+            "cppStandard": "c++17",
+            "intelliSenseMode": "windows-gcc-x64",
+            "browse": {
+                "path": [
+                    "${workspaceFolder}",
+                    "${workspaceFolder}/Apps",
+                    "${workspaceFolder}/Libraries",
+                    "${workspaceFolder}/OS"
+                ],
+                "limitSymbolsToIncludedHeaders": true
+            }
+        }
+    ],
+    "version": 4
+}
