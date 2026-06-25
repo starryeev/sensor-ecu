@@ -1,0 +1,34 @@
+# TASKING / AURIX build output
+/TriCore Debug (TASKING)/
+
+# Common compiled artifacts
+*.o
+*.obj
+*.d
+*.elf
+*.hex
+*.map
+*.lst
+*.bin
+*.srec
+*.src
+*.mdf
+*.opt
+
+# Python local artifacts
+__pycache__/
+*.py[cod]
+.pytest_cache/
+
+# Logs and temporary files
+*.log
+*.tmp
+*.temp
+*.bak
+*.orig
+*~
+
+# OS metadata
+.DS_Store
+Thumbs.db
+desktop.ini
