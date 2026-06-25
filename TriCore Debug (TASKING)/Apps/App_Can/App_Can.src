@@ -1,6 +1,6 @@
 	; Module start
 	.compiler_version	"TASKING VX-toolset for AURIX Development Studio (non-commercial): C compiler v1.1r8 Build 22011964"
-	.compiler_invocation	"ctc -f cc30552a --dep-file=Apps/App_Can/App_Can.d -c99 --fp-model=3cflnrSTz -D__CPU__=tc37x -D__CPU_TC37X__ --core=tc1.6.2 --fp-model=+float -D__CPU__=tc37x -IC:\\\\Users\\\\starryeev\\\\Documents\\\\Projects\\\\AURIX Development Studio\\\\sensor-ecu -IC:\\\\Users\\\\starryeev\\\\Documents\\\\Projects\\\\AURIX Development Studio\\\\sensor-ecu\\\\Configurations -IC:\\\\Users\\\\starryeev\\\\Documents\\\\Projects\\\\AURIX Development Studio\\\\sensor-ecu\\\\Libraries -IC:\\\\Users\\\\starryeev\\\\Documents\\\\Projects\\\\AURIX Development Studio\\\\sensor-ecu\\\\Libraries\\\\Infra -IC:\\\\Users\\\\starryeev\\\\Documents\\\\Projects\\\\AURIX Development Studio\\\\sensor-ecu\\\\Libraries\\\\Infra\\\\Platform -IC:\\\\Users\\\\starryeev\\\\Documents\\\\Projects\\\\AURIX Development Studio\\\\sensor-ecu\\\\Libraries\\\\Infra\\\\Platform\\\\Tricore -IC:\\\\Users\\\\starryeev\\\\Documents\\\\Projects\\\\AURIX Development Studio\\\\sensor-ecu\\\\Libraries\\\\Infra\\\\Platform\\\\Tricore\\\\Compilers -IC:\\\\Users\\\\starryeev\\\\Documents\\\\Projects\\\\AURIX Development Studio\\\\sensor-ecu\\\\Libraries\\\\Infra\\\\Sfr -IC:\\\\Users\\\\starryeev\\\\Documents\\\\Projects\\\\AURIX Development Studio\\\\sensor-ecu\\\\Libraries\\\\Infra\\\\Sfr\\\\TC37A -IC:\\\\Users\\\\starryeev\\\\Documents\\\\Projects\\\\AURIX Development Studio\\\\sensor-ecu\\\\Libraries\\\\Infra\\\\Sfr\\\\TC37A\\\\_Reg -IC:\\\\Users\\\\starryeev\\\\Documents\\\\Projects\\\\AURIX Development Studio\\\\sensor-ecu\\\\Libraries\\\\Infra\\\\Ssw -IC:\\\\Users\\\\starryeev\\\\Documents\\\\Projects\\\\AURIX Development Studio\\\\sensor-ecu\\\\Libraries\\\\Infra\\\\Ssw\\\\TC37A -IC:\\\\Users\\\\starryeev\\\\Documents\\\\Projects\\\\AURIX Development Studio\\\\sensor-ecu\\\\Libraries\\\\Infra\\\\Ssw\\\\TC37A\\\\Tricore -IC:\\\\Users\\\\starryeev\\\\Documents\\\\Projects\\\\AURIX Development Studio\\\\sensor-ecu\\\\Libraries\\\\Service -IC:\\\\Users\\\\starryeev\\\\Documents\\\\Projects\\\\AURIX Development Studio\\\\sensor-ecu\\\\Libraries\\\\Service\\\\CpuGeneric -IC:\\\\Users\\\\starryeev\\\\Documents\\\\Projects\\\\AURIX Development Studio\\\\sensor-ecu\\\\Libraries\\\\Service\\\\CpuGeneric\\\\_Utilities -IC:\\\\Users\\\\starryeev\\\\Documents\\\\Projects\\\\AURIX Development Studio\\\\sensor-ecu\\\\Libraries\\\\iLLD -IC:\\\\Users\\\\starryeev\\\\Documents\\\\Projects\\\\AURIX Development Studio\\\\sensor-ecu\\\\Libraries\\\\iLLD\\\\TC37A -IC:\\\\Users\\\\starryeev\\\\Documents\\\\Projects\\\\AURIX Development Studio\\\\sensor-ecu\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore -IC:\\\\Users\\\\starryeev\\\\Documents\\\\Projects\\\\AURIX Development Studio\\\\sensor-ecu\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Cpu -IC:\\\\Users\\\\starryeev\\\\Documents\\\\Projects\\\\AURIX Development Studio\\\\sensor-ecu\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Cpu\\\\Irq -IC:\\\\Users\\\\starryeev\\\\Documents\\\\Projects\\\\AURIX Development Studio\\\\sensor-ecu\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Cpu\\\\Std -IC:\\\\Users\\\\starryeev\\\\Documents\\\\Projects\\\\AURIX Development Studio\\\\sensor-ecu\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Cpu\\\\Trap -IC:\\\\Users\\\\starryeev\\\\Documents\\\\Projects\\\\AURIX Development Studio\\\\sensor-ecu\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Can -IC:\\\\Users\\\\starryeev\\\\Documents\\\\Projects\\\\AURIX Development Studio\\\\sensor-ecu\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Can\\\\Can -IC:\\\\Users\\\\starryeev\\\\Documents\\\\Projects\\\\AURIX Development Studio\\\\sensor-ecu\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Can\\\\Std -IC:\\\\Users\\\\starryeev\\\\Documents\\\\Projects\\\\AURIX Development Studio\\\\sensor-ecu\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Gtm -IC:\\\\Users\\\\starryeev\\\\Documents\\\\Projects\\\\AURIX Development Studio\\\\sensor-ecu\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Gtm\\\\Std -IC:\\\\Users\\\\starryeev\\\\Documents\\\\Projects\\\\AURIX Development Studio\\\\sensor-ecu\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Mtu -IC:\\\\Users\\\\starryeev\\\\Documents\\\\Projects\\\\AURIX Development Studio\\\\sensor-ecu\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Mtu\\\\Std -IC:\\\\Users\\\\starryeev\\\\Documents\\\\Projects\\\\AURIX Development Studio\\\\sensor-ecu\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Pms -IC:\\\\Users\\\\starryeev\\\\Documents\\\\Projects\\\\AURIX Development Studio\\\\sensor-ecu\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Pms\\\\Std -IC:\\\\Users\\\\starryeev\\\\Documents\\\\Projects\\\\AURIX Development Studio\\\\sensor-ecu\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Port -IC:\\\\Users\\\\starryeev\\\\Documents\\\\Projects\\\\AURIX Development Studio\\\\sensor-ecu\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Port\\\\Io -IC:\\\\Users\\\\starryeev\\\\Documents\\\\Projects\\\\AURIX Development Studio\\\\sensor-ecu\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Port\\\\Std -IC:\\\\Users\\\\starryeev\\\\Documents\\\\Projects\\\\AURIX Development Studio\\\\sensor-ecu\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Scu -IC:\\\\Users\\\\starryeev\\\\Documents\\\\Projects\\\\AURIX Development Studio\\\\sensor-ecu\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Scu\\\\Std -IC:\\\\Users\\\\starryeev\\\\Documents\\\\Projects\\\\AURIX Development Studio\\\\sensor-ecu\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Src -IC:\\\\Users\\\\starryeev\\\\Documents\\\\Projects\\\\AURIX Development Studio\\\\sensor-ecu\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Src\\\\Std -IC:\\\\Users\\\\starryeev\\\\Documents\\\\Projects\\\\AURIX Development Studio\\\\sensor-ecu\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\_Impl -IC:\\\\Users\\\\starryeev\\\\Documents\\\\Projects\\\\AURIX Development Studio\\\\sensor-ecu\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\_PinMap -IC:\\\\Users\\\\starryeev\\\\Documents\\\\Projects\\\\AURIX Development Studio\\\\sensor-ecu\\\\OS -IC:\\\\Users\\\\starryeev\\\\Documents\\\\Projects\\\\AURIX Development Studio\\\\sensor-ecu\\\\OS\\\\FreeRTOS -IC:\\\\Users\\\\starryeev\\\\Documents\\\\Projects\\\\AURIX Development Studio\\\\sensor-ecu\\\\OS\\\\FreeRTOS\\\\include -IC:\\\\Users\\\\starryeev\\\\Documents\\\\Projects\\\\AURIX Development Studio\\\\sensor-ecu\\\\OS\\\\FreeRTOS\\\\portable -IC:\\\\Users\\\\starryeev\\\\Documents\\\\Projects\\\\AURIX Development Studio\\\\sensor-ecu\\\\OS\\\\FreeRTOS\\\\portable\\\\Tasking -IC:\\\\Users\\\\starryeev\\\\Documents\\\\Projects\\\\AURIX Development Studio\\\\sensor-ecu\\\\OS\\\\FreeRTOS\\\\portable\\\\Tasking\\\\TC3 -g2 -w544 -w557 -t4 --language=+volatile -N0 -O0 -Y0 -Z0 --compact-max-size=200 --misrac-version=2012 -o Apps/App_Can/App_Can.src ../Apps/App_Can/App_Can.c"
+	.compiler_invocation	"ctc -f cc22624a --dep-file=Apps/App_Can/App_Can.d -c99 --fp-model=3cflnrSTz -D__CPU__=tc37x -D__CPU_TC37X__ --core=tc1.6.2 --fp-model=+float -D__CPU__=tc37x -IC:\\\\Users\\\\starryeev\\\\Documents\\\\Projects\\\\AURIX Development Studio\\\\sensor-ecu -IC:\\\\Users\\\\starryeev\\\\Documents\\\\Projects\\\\AURIX Development Studio\\\\sensor-ecu\\\\Configurations -IC:\\\\Users\\\\starryeev\\\\Documents\\\\Projects\\\\AURIX Development Studio\\\\sensor-ecu\\\\Libraries -IC:\\\\Users\\\\starryeev\\\\Documents\\\\Projects\\\\AURIX Development Studio\\\\sensor-ecu\\\\Libraries\\\\Infra -IC:\\\\Users\\\\starryeev\\\\Documents\\\\Projects\\\\AURIX Development Studio\\\\sensor-ecu\\\\Libraries\\\\Infra\\\\Platform -IC:\\\\Users\\\\starryeev\\\\Documents\\\\Projects\\\\AURIX Development Studio\\\\sensor-ecu\\\\Libraries\\\\Infra\\\\Platform\\\\Tricore -IC:\\\\Users\\\\starryeev\\\\Documents\\\\Projects\\\\AURIX Development Studio\\\\sensor-ecu\\\\Libraries\\\\Infra\\\\Platform\\\\Tricore\\\\Compilers -IC:\\\\Users\\\\starryeev\\\\Documents\\\\Projects\\\\AURIX Development Studio\\\\sensor-ecu\\\\Libraries\\\\Infra\\\\Sfr -IC:\\\\Users\\\\starryeev\\\\Documents\\\\Projects\\\\AURIX Development Studio\\\\sensor-ecu\\\\Libraries\\\\Infra\\\\Sfr\\\\TC37A -IC:\\\\Users\\\\starryeev\\\\Documents\\\\Projects\\\\AURIX Development Studio\\\\sensor-ecu\\\\Libraries\\\\Infra\\\\Sfr\\\\TC37A\\\\_Reg -IC:\\\\Users\\\\starryeev\\\\Documents\\\\Projects\\\\AURIX Development Studio\\\\sensor-ecu\\\\Libraries\\\\Infra\\\\Ssw -IC:\\\\Users\\\\starryeev\\\\Documents\\\\Projects\\\\AURIX Development Studio\\\\sensor-ecu\\\\Libraries\\\\Infra\\\\Ssw\\\\TC37A -IC:\\\\Users\\\\starryeev\\\\Documents\\\\Projects\\\\AURIX Development Studio\\\\sensor-ecu\\\\Libraries\\\\Infra\\\\Ssw\\\\TC37A\\\\Tricore -IC:\\\\Users\\\\starryeev\\\\Documents\\\\Projects\\\\AURIX Development Studio\\\\sensor-ecu\\\\Libraries\\\\Service -IC:\\\\Users\\\\starryeev\\\\Documents\\\\Projects\\\\AURIX Development Studio\\\\sensor-ecu\\\\Libraries\\\\Service\\\\CpuGeneric -IC:\\\\Users\\\\starryeev\\\\Documents\\\\Projects\\\\AURIX Development Studio\\\\sensor-ecu\\\\Libraries\\\\Service\\\\CpuGeneric\\\\_Utilities -IC:\\\\Users\\\\starryeev\\\\Documents\\\\Projects\\\\AURIX Development Studio\\\\sensor-ecu\\\\Libraries\\\\iLLD -IC:\\\\Users\\\\starryeev\\\\Documents\\\\Projects\\\\AURIX Development Studio\\\\sensor-ecu\\\\Libraries\\\\iLLD\\\\TC37A -IC:\\\\Users\\\\starryeev\\\\Documents\\\\Projects\\\\AURIX Development Studio\\\\sensor-ecu\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore -IC:\\\\Users\\\\starryeev\\\\Documents\\\\Projects\\\\AURIX Development Studio\\\\sensor-ecu\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Cpu -IC:\\\\Users\\\\starryeev\\\\Documents\\\\Projects\\\\AURIX Development Studio\\\\sensor-ecu\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Cpu\\\\Irq -IC:\\\\Users\\\\starryeev\\\\Documents\\\\Projects\\\\AURIX Development Studio\\\\sensor-ecu\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Cpu\\\\Std -IC:\\\\Users\\\\starryeev\\\\Documents\\\\Projects\\\\AURIX Development Studio\\\\sensor-ecu\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Cpu\\\\Trap -IC:\\\\Users\\\\starryeev\\\\Documents\\\\Projects\\\\AURIX Development Studio\\\\sensor-ecu\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Can -IC:\\\\Users\\\\starryeev\\\\Documents\\\\Projects\\\\AURIX Development Studio\\\\sensor-ecu\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Can\\\\Can -IC:\\\\Users\\\\starryeev\\\\Documents\\\\Projects\\\\AURIX Development Studio\\\\sensor-ecu\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Can\\\\Std -IC:\\\\Users\\\\starryeev\\\\Documents\\\\Projects\\\\AURIX Development Studio\\\\sensor-ecu\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Gtm -IC:\\\\Users\\\\starryeev\\\\Documents\\\\Projects\\\\AURIX Development Studio\\\\sensor-ecu\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Gtm\\\\Std -IC:\\\\Users\\\\starryeev\\\\Documents\\\\Projects\\\\AURIX Development Studio\\\\sensor-ecu\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Mtu -IC:\\\\Users\\\\starryeev\\\\Documents\\\\Projects\\\\AURIX Development Studio\\\\sensor-ecu\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Mtu\\\\Std -IC:\\\\Users\\\\starryeev\\\\Documents\\\\Projects\\\\AURIX Development Studio\\\\sensor-ecu\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Pms -IC:\\\\Users\\\\starryeev\\\\Documents\\\\Projects\\\\AURIX Development Studio\\\\sensor-ecu\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Pms\\\\Std -IC:\\\\Users\\\\starryeev\\\\Documents\\\\Projects\\\\AURIX Development Studio\\\\sensor-ecu\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Port -IC:\\\\Users\\\\starryeev\\\\Documents\\\\Projects\\\\AURIX Development Studio\\\\sensor-ecu\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Port\\\\Io -IC:\\\\Users\\\\starryeev\\\\Documents\\\\Projects\\\\AURIX Development Studio\\\\sensor-ecu\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Port\\\\Std -IC:\\\\Users\\\\starryeev\\\\Documents\\\\Projects\\\\AURIX Development Studio\\\\sensor-ecu\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Scu -IC:\\\\Users\\\\starryeev\\\\Documents\\\\Projects\\\\AURIX Development Studio\\\\sensor-ecu\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Scu\\\\Std -IC:\\\\Users\\\\starryeev\\\\Documents\\\\Projects\\\\AURIX Development Studio\\\\sensor-ecu\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Src -IC:\\\\Users\\\\starryeev\\\\Documents\\\\Projects\\\\AURIX Development Studio\\\\sensor-ecu\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Src\\\\Std -IC:\\\\Users\\\\starryeev\\\\Documents\\\\Projects\\\\AURIX Development Studio\\\\sensor-ecu\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\_Impl -IC:\\\\Users\\\\starryeev\\\\Documents\\\\Projects\\\\AURIX Development Studio\\\\sensor-ecu\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\_PinMap -IC:\\\\Users\\\\starryeev\\\\Documents\\\\Projects\\\\AURIX Development Studio\\\\sensor-ecu\\\\OS -IC:\\\\Users\\\\starryeev\\\\Documents\\\\Projects\\\\AURIX Development Studio\\\\sensor-ecu\\\\OS\\\\FreeRTOS -IC:\\\\Users\\\\starryeev\\\\Documents\\\\Projects\\\\AURIX Development Studio\\\\sensor-ecu\\\\OS\\\\FreeRTOS\\\\include -IC:\\\\Users\\\\starryeev\\\\Documents\\\\Projects\\\\AURIX Development Studio\\\\sensor-ecu\\\\OS\\\\FreeRTOS\\\\portable -IC:\\\\Users\\\\starryeev\\\\Documents\\\\Projects\\\\AURIX Development Studio\\\\sensor-ecu\\\\OS\\\\FreeRTOS\\\\portable\\\\Tasking -IC:\\\\Users\\\\starryeev\\\\Documents\\\\Projects\\\\AURIX Development Studio\\\\sensor-ecu\\\\OS\\\\FreeRTOS\\\\portable\\\\Tasking\\\\TC3 -g2 -w544 -w557 -t4 --language=+volatile -N0 -O0 -Y0 -Z0 --compact-max-size=200 --misrac-version=2012 -o Apps/App_Can/App_Can.src ../Apps/App_Can/App_Can.c"
 	.compiler_name		"ctc"
 	;source	'../Apps/App_Can/App_Can.c'
 
@@ -110,56 +110,56 @@ sendUltrasonicDistanceMessage:	.type	func
 	movh.a	a15,#@his(g_distances)
 	lea	a15,[a15]@los(g_distances)
 .L165:
-	ld.hu	d15,[a15]2
+	ld.hu	d15,[a15]4
 .L166:
 	st.h	[a10]2,d15
 .L167:
 	movh.a	a15,#@his(g_distances)
 	lea	a15,[a15]@los(g_distances)
 .L168:
-	ld.hu	d15,[a15]4
+	ld.hu	d15,[a15]8
 .L169:
 	st.h	[a10]4,d15
 .L170:
 	movh.a	a15,#@his(g_distances)
 	lea	a15,[a15]@los(g_distances)
 .L171:
-	ld.hu	d15,[a15]6
+	ld.hu	d15,[a15]12
 .L172:
 	st.h	[a10]6,d15
 .L173:
 	movh.a	a15,#@his(g_distances)
 	lea	a15,[a15]@los(g_distances)
 .L174:
-	ld.hu	d15,[a15]8
+	ld.hu	d15,[a15]16
 .L175:
 	st.h	[a10]8,d15
 .L176:
 	movh.a	a15,#@his(g_distances)
 	lea	a15,[a15]@los(g_distances)
 .L177:
-	ld.hu	d15,[a15]10
+	ld.hu	d15,[a15]2
 .L178:
 	st.h	[a10]10,d15
 .L179:
 	movh.a	a15,#@his(g_distances)
 	lea	a15,[a15]@los(g_distances)
 .L180:
-	ld.hu	d15,[a15]12
+	ld.hu	d15,[a15]6
 .L181:
 	st.h	[a10]12,d15
 .L182:
 	movh.a	a15,#@his(g_distances)
 	lea	a15,[a15]@los(g_distances)
 .L183:
-	ld.hu	d15,[a15]14
+	ld.hu	d15,[a15]10
 .L184:
 	st.h	[a10]14,d15
 .L185:
 	movh.a	a15,#@his(g_distances)
 	lea	a15,[a15]@los(g_distances)
 .L186:
-	ld.hu	d15,[a15]16
+	ld.hu	d15,[a15]14
 .L187:
 	st.h	[a10]16,d15
 .L188:
@@ -25297,7 +25297,7 @@ g_vehicleSpeed:	.type	object
 	.byte	2
 	.word	.L23
 	.byte	3
-	.byte	'CanApp_Init',0,1,56,6,1,1,1
+	.byte	'CanApp_Init',0,1,66,6,1,1,1
 	.word	.L16,.L73,.L15
 	.byte	4
 	.word	.L16,.L73
@@ -25320,7 +25320,7 @@ g_vehicleSpeed:	.type	object
 .L106:
 	.byte	5,9,7,0,5,2
 	.word	.L16
-	.byte	3,57,1,5,5,9
+	.byte	3,195,0,1,5,5,9
 	.half	.L107-.L16
 	.byte	1,5,9,7,9
 	.half	.L108-.L107
@@ -25357,10 +25357,10 @@ g_vehicleSpeed:	.type	object
 	.byte	2
 	.word	.L23
 	.byte	3
-	.byte	'CanApp_Run',0,1,68,6,1,1,1
+	.byte	'CanApp_Run',0,1,78,6,1,1,1
 	.word	.L18,.L74,.L17
 	.byte	4
-	.byte	'arg',0,1,68,23
+	.byte	'arg',0,1,78,23
 	.word	.L75,.L76
 	.byte	5
 	.word	.L18,.L74
@@ -25383,7 +25383,7 @@ g_vehicleSpeed:	.type	object
 .L115:
 	.byte	5,16,7,0,5,2
 	.word	.L18
-	.byte	3,199,0,1,5,13,9
+	.byte	3,209,0,1,5,13,9
 	.half	.L97-.L18
 	.byte	3,2,1,5,38,9
 	.half	.L6-.L97
@@ -25416,10 +25416,10 @@ g_vehicleSpeed:	.type	object
 	.byte	2
 	.word	.L23
 	.byte	3
-	.byte	'CanApp_SetImuYaw',0,1,81,6,1,1,1
+	.byte	'CanApp_SetImuYaw',0,1,91,6,1,1,1
 	.word	.L20,.L77,.L19
 	.byte	4
-	.byte	'imuYaw',0,1,81,30
+	.byte	'imuYaw',0,1,91,30
 	.word	.L78,.L79
 	.byte	5
 	.word	.L20,.L77
@@ -25442,7 +25442,7 @@ g_vehicleSpeed:	.type	object
 .L121:
 	.byte	5,5,7,0,5,2
 	.word	.L20
-	.byte	3,210,0,1,5,14,9
+	.byte	3,220,0,1,5,14,9
 	.half	.L122-.L20
 	.byte	1,5,1,9
 	.half	.L123-.L122
@@ -25469,10 +25469,10 @@ g_vehicleSpeed:	.type	object
 	.byte	2
 	.word	.L23
 	.byte	3
-	.byte	'CanApp_SetVehicleSpeed',0,1,86,6,1,1,1
+	.byte	'CanApp_SetVehicleSpeed',0,1,96,6,1,1,1
 	.word	.L22,.L80,.L21
 	.byte	4
-	.byte	'vehicleSpeed',0,1,86,35
+	.byte	'vehicleSpeed',0,1,96,35
 	.word	.L81,.L82
 	.byte	5
 	.word	.L22,.L80
@@ -25495,7 +25495,7 @@ g_vehicleSpeed:	.type	object
 .L127:
 	.byte	5,5,7,0,5,2
 	.word	.L22
-	.byte	3,215,0,1,5,20,9
+	.byte	3,225,0,1,5,20,9
 	.half	.L128-.L22
 	.byte	1,5,1,9
 	.half	.L129-.L128
@@ -25717,12 +25717,12 @@ g_vehicleSpeed:	.type	object
 	.byte	2
 	.word	.L23
 	.byte	3
-	.byte	'sendUltrasonicDistanceMessage',0,1,36,13,1,1
+	.byte	'sendUltrasonicDistanceMessage',0,1,46,13,1,1
 	.word	.L14,.L92,.L13
 	.byte	4
 	.word	.L14,.L92
 	.byte	5
-	.byte	'message',0,1,38,29
+	.byte	'message',0,1,48,29
 	.word	.L93,.L94
 	.byte	0,0,0
 	.sdecl	'.debug_abbrev',debug,cluster('sendUltrasonicDistanceMessage')
@@ -25743,7 +25743,7 @@ g_vehicleSpeed:	.type	object
 .L161:
 	.byte	5,13,7,0,5,2
 	.word	.L14
-	.byte	3,35,1,5,25,9
+	.byte	3,45,1,5,25,9
 	.half	.L96-.L14
 	.byte	3,4,1,5,36,9
 	.half	.L162-.L96
@@ -25836,7 +25836,7 @@ g_vehicleSpeed:	.type	object
 	.byte	12,1,2
 	.word	.L23
 	.byte	3
-	.byte	'g_isInitialized',0,17,24,16
+	.byte	'g_isInitialized',0,17,34,16
 	.word	.L81
 	.byte	5,3
 	.word	g_isInitialized
@@ -25858,7 +25858,7 @@ g_vehicleSpeed:	.type	object
 	.byte	12,1,2
 	.word	.L23
 	.byte	3
-	.byte	'g_imuYaw',0,17,25,15
+	.byte	'g_imuYaw',0,17,35,15
 	.word	.L78
 	.byte	5,3
 	.word	g_imuYaw
@@ -25880,7 +25880,7 @@ g_vehicleSpeed:	.type	object
 	.byte	12,1,2
 	.word	.L23
 	.byte	3
-	.byte	'g_vehicleSpeed',0,17,26,15
+	.byte	'g_vehicleSpeed',0,17,36,15
 	.word	.L81
 	.byte	5,3
 	.word	g_vehicleSpeed
