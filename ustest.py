@@ -62,10 +62,13 @@ PCAN_FD_TIMING = {
     "data_sjw": 1,
 }
 
-MAX_DISPLAY_MM = 2000
+MAX_DISPLAY_MM = 5000
 WARN_MM = 700
 DANGER_MM = 300
 SENSOR_ERROR_VALUE = 0xFFFF  # raw bytes FF FF
+CAN_RECV_TIMEOUT_S = 0.01
+GUI_POLL_INTERVAL_MS = 10
+LATEST_FRAME_QUEUE_SIZE = 1
 
 PAYLOAD_FORMAT = "<10HhB"   # 10 uint16, 1 int16, 1 uint8 = 23 bytes
 PAYLOAD_SIZE = struct.calcsize(PAYLOAD_FORMAT)
@@ -117,11 +120,6 @@ class UltrasonicDistanceCmd:
 def is_sensor_error(mm: int) -> bool:
     """ECU가 거리값으로 FF FF를 보낸 경우. 센서 이상으로 표시한다."""
     return mm == SENSOR_ERROR_VALUE
-
-
-def is_no_data(mm: int) -> bool:
-    """거리로 쓰기 어려운 값. 센서 이상과는 별도로 회색 계열로 표시한다."""
-    return False
 
 
 def raw_distance_hex(raw: bytes, sensor_index: int) -> str:
@@ -188,6 +186,22 @@ class CanReaderThread(threading.Thread):
             except Exception:
                 pass
 
+    def _put_latest(self, decoded: UltrasonicDistanceCmd) -> None:
+        while True:
+            try:
+                self.out_queue.get_nowait()
+            except queue.Empty:
+                break
+
+        try:
+            self.out_queue.put_nowait(decoded)
+        except queue.Full:
+            try:
+                self.out_queue.get_nowait()
+                self.out_queue.put_nowait(decoded)
+            except queue.Empty:
+                pass
+
     def run(self) -> None:
         try:
             self._bus = make_pcan_fd_bus(self.channel)
@@ -198,7 +212,7 @@ class CanReaderThread(threading.Thread):
 
         while not self._stop_event.is_set():
             try:
-                msg = self._bus.recv(timeout=0.1)
+                msg = self._bus.recv(timeout=CAN_RECV_TIMEOUT_S)
             except Exception as exc:
                 self.status_queue.put(("error", f"CAN 수신 오류: {exc}"))
                 time.sleep(0.5)
@@ -220,7 +234,7 @@ class CanReaderThread(threading.Thread):
                 self.status_queue.put(("warn", f"프레임 무시: {exc}"))
                 continue
 
-            self.out_queue.put(decoded)
+            self._put_latest(decoded)
 
 
 class UltrasonicViewer(tk.Tk):
@@ -234,7 +248,7 @@ class UltrasonicViewer(tk.Tk):
         self.warn_mm = WARN_MM
         self.danger_mm = DANGER_MM
 
-        self.data_queue: queue.Queue[UltrasonicDistanceCmd] = queue.Queue()
+        self.data_queue: queue.Queue[UltrasonicDistanceCmd] = queue.Queue(maxsize=LATEST_FRAME_QUEUE_SIZE)
         self.status_queue: queue.Queue[Tuple[str, str]] = queue.Queue()
         self.reader: Optional[CanReaderThread] = None
 
@@ -246,7 +260,7 @@ class UltrasonicViewer(tk.Tk):
         self.can_id_var = tk.StringVar(value=f"0x{CAN_ID_DEFAULT:X}")
 
         self._build_ui()
-        self.after(50, self._poll_queues)
+        self.after(GUI_POLL_INTERVAL_MS, self._poll_queues)
         self.protocol("WM_DELETE_WINDOW", self._on_close)
 
         if AUTO_CONNECT_ON_START:
@@ -301,6 +315,7 @@ class UltrasonicViewer(tk.Tk):
             text=(
                 f"Sensor Error : FF FF / 0xFFFF\n"
                 f"Valid Range  : 0x0000 .. 0xFFFE\n"
+                f"Display Max  : {self.max_mm} mm\n"
                 f"Danger       : < {self.danger_mm} mm\n"
                 f"Warning      : < {self.warn_mm} mm\n"
                 f"Normal       : >= {self.warn_mm} mm"
@@ -338,7 +353,7 @@ class UltrasonicViewer(tk.Tk):
             return
 
         channel = self.channel_var.get().strip() or PCAN_CHANNEL_DEFAULT
-        self.data_queue = queue.Queue()
+        self.data_queue = queue.Queue(maxsize=LATEST_FRAME_QUEUE_SIZE)
         self.status_queue = queue.Queue()
         self.reader = CanReaderThread(channel, can_id, self.data_queue, self.status_queue)
         self.reader.start()
@@ -357,7 +372,7 @@ class UltrasonicViewer(tk.Tk):
                 kind, text = self.status_queue.get_nowait()
             except queue.Empty:
                 break
-            prefix = {"connected": "✅", "warn": "⚠", "error": "⛔"}.get(kind, "ℹ")
+            prefix = {"connected": "OK", "warn": "WARN", "error": "ERROR"}.get(kind, "INFO")
             self.status_var.set(f"{prefix} {text}")
 
         updated = False
@@ -376,7 +391,7 @@ class UltrasonicViewer(tk.Tk):
         else:
             self._update_meta_only()
 
-        self.after(50, self._poll_queues)
+        self.after(GUI_POLL_INTERVAL_MS, self._poll_queues)
 
     def _update_labels(self) -> None:
         if self.last_data is None:
@@ -433,7 +448,7 @@ class UltrasonicViewer(tk.Tk):
         scale = min(w, h)
 
         # 배경 거리 링
-        for ratio, label in ((0.20, "near"), (0.32, "mid"), (0.44, "far")):
+        for ratio, label in ((0.20, "1 m"), (0.32, "3 m"), (0.44, "5 m")):
             rr = scale * ratio
             c.create_oval(cx - rr, cy - rr, cx + rr, cy + rr, outline="#2b3340", width=1)
             c.create_text(cx + rr + 22, cy, text=label, fill="#566172", font=("Segoe UI", 8))
