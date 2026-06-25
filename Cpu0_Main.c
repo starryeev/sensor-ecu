@@ -38,7 +38,9 @@
 #include "IfxCpu.h"
 #include "IfxScuWdt.h"
 
-#include "App_Config.h"
+#include "Apps/App_Can/App_Can.h"
+#include "Apps/App_SchedulingStatus/App_SchedulingStatus.h"
+#include "Apps/App_Ultrasonic/App_Ultrasonic.h"
 #include "FreeRTOS.h"
 #include "task.h"
 
@@ -58,11 +60,14 @@ void core0_main(void)
     IfxCpu_emitEvent(&g_cpuSyncEvent);
     IfxCpu_waitEvent(&g_cpuSyncEvent, 1);
     
-    /* Create LED1 app task */
-    xTaskCreate(task_app_led1, "APP LED1", configMINIMAL_STACK_SIZE, NULL, 0, NULL);
+    /* Create scheduling status app task */
+    xTaskCreate(SchedulingStatusApp_Run, "APP STATUS", configMINIMAL_STACK_SIZE, NULL, 0, NULL);
 
-    /* Create LED2 app task */
-    xTaskCreate(task_app_led2, "APP LED2", configMINIMAL_STACK_SIZE, NULL, 0, NULL);
+    /* Create CAN app task */
+    xTaskCreate(CanApp_Run, "APP CAN", configMINIMAL_STACK_SIZE, NULL, 0, NULL);
+
+    /* Create ultrasonic app task */
+    xTaskCreate(UltrasonicApp_Run, "APP ULTRASONIC", configMINIMAL_STACK_SIZE, NULL, 0, NULL);
 
     /* Start the scheduler */
     vTaskStartScheduler();
